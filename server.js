@@ -40,7 +40,7 @@ app.use('/api/v1/products', productRouter)
 app.use('/api/v1/carts', cartRouter)
 app.use('/api/v1/rooms', roomRouter)
 
-app.use(notFoundMiddleware)
+// app.use(notFoundMiddleware)
 app.use(errorHandlerMiddleware)
 
 // Connect to mongodb
@@ -55,9 +55,9 @@ mongoose.connect(URI, {
 
 if(process.env.NODE_ENV === 'production'){
     app.use(express.static('client/build'))
-    app.get('*', (req, res)=>{
-        res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'))
-    })
+    // app.get('*', (req, res)=>{
+    //     res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'))
+    // })
 }
 
 
