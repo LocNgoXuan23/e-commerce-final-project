@@ -12,10 +12,11 @@
     "axios": "^0.21.1",
     "dotenv": "^8.2.0",
     "react": "^17.0.2",
+    "react-date-picker": "^8.3.6",
     "react-dom": "^17.0.2",
-    "react-scripts": "4.0.3",
     "react-icons": "^3.11.0",
     "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.3",
     "stripe": "^8.130.0",
     "styled-components": "^5.2.1",
     "web-vitals": "^1.1.2"
