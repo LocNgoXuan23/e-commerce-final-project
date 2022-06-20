@@ -114,8 +114,15 @@ export const UserProvider = ({ children }) => {
       setAlert(true, 'warring', 'Please provide name and email and password !!!')
       return
     }
+
+    if (password.length < 6) {
+      setAlert(true, 'warring', 'Please provide password minlength is 6 !!!')
+      return
+    }
+
     const user = { name, email, password }
     setIsSubmitSuccess(false)
+
     try {
       await axios.post(register_url, user)
       setName('')
